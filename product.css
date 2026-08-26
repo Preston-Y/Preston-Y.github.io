@@ -1,48 +1,140 @@
-.container {
-  max-width: 960px;
+/* =========================================
+   GENERAL
+========================================= */
+
+body {
+  overflow-x: hidden;
 }
 
 /*
- * Custom translucent site header
+ * Do not restrict every Bootstrap container
+ * to 960px.
  */
+.container {
+  max-width: 1320px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
+
 .site-header a {
   color: #8e8e8e;
-  transition: color .15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  text-decoration: none;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
 }
 
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
 /*
- * Dummy devices (replace them with your own or something else entirely!)
+ * Override the viewport-based .lead rule
+ * currently inside your Bootstrap CSS.
  */
+.lead {
+  font-size: clamp(1rem, 1.15vw, 1.25rem);
+  font-weight: 300;
+}
+
+.display-4 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.display-5 {
+  font-size: clamp(1.75rem, 2.3vw, 3rem);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.portfolio-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: clamp(430px, 45vw, 680px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: clamp(8px, 1vw, 16px);
+  padding: clamp(50px, 6vw, 100px) 20px;
+
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 650px);
+  margin: auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+
+  max-width: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================
+   DECORATIVE PRODUCT DEVICES
+========================================= */
 
 .product-device {
   position: absolute;
-  right: 10%;
+
+  right: clamp(-100px, 8vw, 10%);
   bottom: -30%;
-  width: 300px;
-  height: 540px;
+
+  width: clamp(220px, 20vw, 340px);
+  height: clamp(400px, 36vw, 580px);
+
   background-color: #333;
+
   border-radius: 21px;
+
   transform: rotate(30deg);
 }
 
 .product-device::before {
   position: absolute;
+
   top: 10%;
   right: 10px;
   bottom: 10%;
   left: 10px;
+
   content: "";
-  background-color: rgba(255, 255, 255, .1);
+
+  background-color: rgba(255, 255, 255, 0.1);
+
   border-radius: 5px;
 }
 
@@ -50,20 +142,194 @@
   top: -25%;
   right: auto;
   bottom: 0;
-  left: 5%;
+
+  left: clamp(-100px, 4vw, 5%);
+
   background-color: #e5e5e5;
 }
 
 
-/*
- * Extra utilities
- */
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(8px, 1vw, 16px);
+
+  width: 100%;
+
+  padding: clamp(8px, 1vw, 16px);
+}
+
+
+/* =========================================
+   PROJECT CARDS
+========================================= */
+
+.project-card {
+  min-width: 0;
+
+  padding:
+    clamp(30px, 3vw, 60px)
+    clamp(18px, 2.5vw, 50px)
+    clamp(20px, 2vw, 40px);
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.project-dark {
+  color: white;
+  background-color: #212529;
+}
+
+.project-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.project-blue {
+  color: white;
+  background-color: #0d6efd;
+}
+
+
+/* =========================================
+   PROJECT TEXT
+========================================= */
+
+.project-text {
+  margin-bottom: clamp(20px, 2.5vw, 45px);
+}
+
+.project-text h2 {
+  margin-bottom: 0.5rem;
+
+  font-size: clamp(1.6rem, 2.2vw, 3rem);
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.project-text p {
+  margin-bottom: 0;
+
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+  font-weight: 300;
+}
+
+
+/* =========================================
+   CAD VIEWERS
+========================================= */
+
+.cad-viewer {
+  width: min(90%, 900px);
+
+  aspect-ratio: 16 / 10;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+
+  border-radius: 20px 20px 0 0;
+}
+
+.cad-viewer iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+
+/* =========================================
+   PLACEHOLDERS
+========================================= */
+
+.project-placeholder {
+  width: min(80%, 800px);
+
+  aspect-ratio: 16 / 8;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #212529;
+
+  border-radius: 21px 21px 0 0;
+}
+
+.project-placeholder-light {
+  background-color: white;
+}
+
+
+/* =========================================
+   EXISTING BOOTSTRAP FLEX UTILITY
+========================================= */
 
 .flex-equal > * {
   flex: 1;
 }
+
 @media (min-width: 768px) {
   .flex-md-equal > * {
     flex: 1;
   }
+}
+
+
+/* =========================================
+   SMALLER LAPTOP / TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .project-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cad-viewer {
+    width: 95%;
+  }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .project-card {
+    padding: 40px 15px 25px;
+  }
+
+  .cad-viewer {
+    width: 100%;
+  }
+
+  .product-device,
+  .product-device-2 {
+    display: none;
+  }
+
 }
