@@ -239,13 +239,11 @@ body {
 .project-card > iframe {
   position: absolute;
 
-  top: 21.4%;
+  top: 21.36%;
   left: 5%;
-  right: 5%;
-  bottom: 5%;
 
-  width: auto !important;
-  height: auto !important;
+  width: 90% !important;
+  height: 73.64% !important;
 
   border: none !important;
   background-color: white;
