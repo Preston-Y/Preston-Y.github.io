@@ -234,18 +234,18 @@ body {
    CAD IFRAME
 ========================================= */
 
-.project-iframe {
+.project-card > iframe {
   position: absolute;
 
-  top: 24%;
+  top: 20%;
   left: 5%;
 
-  width: 90%;
-  height: auto;
+  width: 90% !important;
+  height: auto !important;
 
   aspect-ratio: 16 / 9;
 
-  border: none;
+  border: none !important;
   background-color: white;
 }
 /* =========================================
