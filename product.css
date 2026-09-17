@@ -8,3 +8,189 @@ html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--whit
 .about-section{padding:110px 0;background:var(--header);color:#fff}.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(350px,1.2fr);gap:100px;padding-left:24px;padding-right:24px}.about-section .section-label{color:#98a2b3}.about-copy{max-width:700px;color:#d0d5dd;font-size:1.03rem;line-height:1.75}.about-copy p:last-child{margin-bottom:0}.site-footer{background:#0d0f11;color:#98a2b3;border-top:1px solid #25282d}.footer-inner{min-height:88px;padding-left:24px;padding-right:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:.82rem}
 @media(max-width:900px){.hero-inner{padding-top:90px;padding-bottom:95px}.project-grid{grid-template-columns:1fr}.interactive-featured,.interactive-frame{height:570px}.about-grid{grid-template-columns:1fr;gap:45px}}
 @media(max-width:600px){.site-nav{padding-left:18px;padding-right:18px}.site-links{gap:16px}.hero-inner{padding:78px 18px 82px}.hero-inner h1{font-size:clamp(3.6rem,18vw,5rem)}.work-section{padding-top:72px}.section-heading{padding-left:18px;padding-right:18px}.project-featured{margin-left:18px;margin-right:18px}.project-grid{padding-left:18px;padding-right:18px}.project-copy{padding:28px 25px}.interactive-featured,.interactive-frame{height:430px}.about-grid{padding-left:18px;padding-right:18px}.footer-inner{min-height:105px;padding-left:18px;padding-right:18px;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px}}
+/* =========================================================
+   MOBILE CLEANUP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  .site-nav {
+    min-height: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-brand {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .site-links {
+    gap: 14px;
+  }
+
+  .site-links a {
+    font-size: 0.82rem;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero-inner {
+    padding: 65px 18px 72px;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(3.2rem, 17vw, 4.7rem);
+    line-height: 0.95;
+  }
+
+  .hero-title {
+    margin-top: 22px;
+    font-size: 1.55rem;
+  }
+
+  .hero-description {
+    margin-top: 16px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- SECTION HEADING ---------- */
+
+  .work-section {
+    padding-top: 65px;
+    padding-bottom: 80px;
+  }
+
+  .section-heading {
+    padding: 0 18px 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 2.5rem;
+  }
+
+
+  /* ---------- PROJECT LAYOUT ---------- */
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .project-featured {
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 30px;
+  }
+
+  .project-small {
+    min-width: 0;
+  }
+
+  .project-copy {
+    padding: 25px 22px;
+  }
+
+  /*
+    IMPORTANT:
+    Don't force equal description/card height on mobile.
+    Each card should shrink naturally.
+  */
+  .project-small .project-copy {
+    min-height: 0;
+    height: auto;
+  }
+
+  .project-copy h3 {
+    font-size: 1.85rem;
+  }
+
+  .project-copy > p {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- INTERACTIVE MODELS ---------- */
+
+  .interactive-frame,
+  .interactive-featured {
+    width: 100%;
+    height: 430px;
+
+    overflow: hidden;
+  }
+
+  .interactive-frame iframe {
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    border: 0;
+  }
+
+
+  /* ---------- TAGS ---------- */
+
+  .project-tags {
+    gap: 6px;
+  }
+
+  .project-tags span {
+    padding: 6px 9px;
+    font-size: 0.72rem;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-section {
+    padding: 75px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .about-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-copy {
+    font-size: 0.96rem;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-inner {
+    min-height: 100px;
+
+    padding: 22px 18px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 4px;
+  }
+
+}
