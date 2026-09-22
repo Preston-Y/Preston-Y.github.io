@@ -16,7 +16,14 @@
       margin: 0 3px;
     }
   .project-featured .project-copy > p:not(.project-number):not(.project-category):not(.interaction-note) {
-  max-width: 1100px;
+  max-width: 1100px;}
+    .about-section {
+      padding: 75px 0;
+    }
+    @media (max-width: 700px) {
+  .about-title br {
+    display: none;
+  }
 }
   </style>
 </head>
@@ -63,7 +70,7 @@
           </div>
           <p class="interaction-note">Drag the model to rotate and inspect the assembly. Additional viewer tools such as the Components menu<img src="decoded.png"
        alt="Components icon"
-       class="viewer-icon">for exploring individual parts and subassemblies.</p>
+       class="viewer-icon">for exploring individual parts and subassemblies are available.</p>
         </div>
         <div class="interactive-frame interactive-featured">
           <iframe src="SR-TPM-8x8G TS.html" title="Interactive 8-panel solar rack model" loading="lazy"></iframe>
@@ -131,17 +138,29 @@
   </section>
 
   <section class="about-section" id="about">
-    <div class="container about-grid">
-      <div>
-        <p class="section-label">ABOUT</p>
-        <h2>Designing beyond the model.</h2>
-      </div>
-      <div class="about-copy">
-        <p>My work focuses on mechanical CAD, assemblies, configurable products, and engineering documentation (coming soon). I enjoy taking designs from component modeling through complete assemblies and production drawings.</p>
-        <p>This portfolio highlights selected interactive models so the design work can be explored directly rather than viewed only as static images.</p>
-      </div>
+  <div class="container about-grid">
+    <div>
+      <p class="section-label">ABOUT</p>
+      <h2>ABOUT<br>MY<br>WORK</h2>
     </div>
-  </section>
+    <div class="about-copy">
+      <p>
+        My CAD work ranges from individual components to complete mechanical assemblies and configurable product families.
+        Most of the projects shown here were developed in SolidWorks and involved more than simply creating the final geometry.
+      </p>
+      <p>
+        Depending on the project, I worked through component selection, assembly organization, multiple design iterations, and the details needed to make each model fit within a larger system.
+        Some projects challenged me through their complexity and number of parts, while others required me to learn new modeling techniques along the way.
+      </p>
+      <p>
+        I created this portfolio to show the models themselves rather than relying only on screenshots.
+        The interactive viewers allow each assembly to be rotated, inspected, and explored at the component level.
+        I also plan to add more of my engineering drawings and documentation as the portfolio continues to grow.
+      </p>
+    </div>
+
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
